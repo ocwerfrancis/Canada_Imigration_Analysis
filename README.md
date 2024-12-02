@@ -29,4 +29,13 @@ Let's download and import our primary Canadian Immigration dataset using pandas'
 The main types stored in pandas objects are ```float, int, bool, datetime64[ns], datetime64[ns, tz], timedelta[ns], category```, and ```object (string)```. In addition, these dtypes have item sizes, e.g. ```int64``` and ```int32```.
 
 Let's clean the data set to remove a few unnecessary columns. We can use pandas ```drop()``` method as follows:
+<<<<<<< HEAD
 >>>>>>> 14263b9 (First Commit)
+=======
+
+```df_canada.drop(['Type','Coverage','AREA','REG','DEV'], axis=1, inplace=True)```
+
+Let's rename the columns so that they make sense. We can use ```rename()``` method by passing in a dictionary of old and new names as follows:
+
+```df_canada.rename(columns={'OdName':'Country', 'AreaName':'Continent','RegName':'Region'}, inplace=True)
+>>>>>>> e61f54c (First Commit)
